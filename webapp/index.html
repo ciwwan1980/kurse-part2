@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script
+    id="sap-ui-bootstrap"
+    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_bluecrystal"
+    data-sap-ui-xx-bindingSyntax="complex"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-resourceroots='{
+        "ajil.app": "./"
+    }'>
+    </script>
+    <script>
+
+    var oCompContainere= new sap.ui.core.ComponentContainer({
+        
+        name:"ajil.app"
+        });
+
+    oCompContainere.placeAt("content"); 
+
+    // var oView= new sap.ui.view({
+    //     viewName:"ibm.fin.ar.view.Main",
+    //     type:"XML"
+    // });
+    // oView.placeAt("content")
+   
+    </script>
+</head>
+
+<body class="sapUiBody">
+    <div id="content"></div>
+    
+</body>
+
+</html>

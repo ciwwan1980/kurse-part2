@@ -1,0 +1,44 @@
+{
+    "empStr": {
+        "empId": 100,
+        "empName": "ajil",
+        "salary": 9500,
+        "currency": "Euro",
+        "sherlok": false
+    }, 
+    "empTab":[
+        { 
+            "empId": 101,
+            "empName": "Sofi",
+            "salary": 10000,
+            "currency": "Euro",
+            "smoker": false, 
+            "gender": "https://static.vecteezy.com/system/resources/thumbnails/002/002/257/small/beautiful-woman-avatar-character-icon-free-vector.jpg",
+            "mStatus": "s", 
+            "rating":3       
+         },
+
+    { 
+            "empId": 102,
+            "empName": "Ana",
+            "salary": 5000,
+            "currency": "Euro",
+            "smoker": false, 
+            "gender": "https://static.vecteezy.com/system/resources/thumbnails/002/002/257/small/beautiful-woman-avatar-character-icon-free-vector.jpg",
+            "mStatus": "s", 
+            "rating":2    
+    }, 
+    {
+            "empId": 103,
+            "empName": "Nic",
+            "salary": 6000,
+            "currency": "Euro",
+            "smoker": false, 
+            "gender": "https://cdn-icons-png.flaticon.com/512/4128/4128176.png" ,
+            "mStatus": "m", 
+            "rating":5       
+    }
+
+    ]
+
+}

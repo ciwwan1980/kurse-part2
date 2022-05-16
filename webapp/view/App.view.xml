@@ -1,0 +1,12 @@
+
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:core="sap.ui.core" 
+controllerName="ajil.app.controller.App">
+
+<App id="idSpidy">
+
+</App>
+</mvc:View>
+				

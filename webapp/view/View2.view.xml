@@ -1,0 +1,12 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:core="sap.ui.core" 
+controllerName="ajil.app.controller.View2">
+
+<Page title="view2">
+<Button text="Back" press="onBack" />
+<Button text="Check" id="zkas"/>
+</Page>
+</mvc:View>
+			
