@@ -5,7 +5,9 @@ sap.ui.define([
         "use strict";
 
         return UIComponent.extend("ajil.app.Component", {
-            metadata: {},
+            metadata: {
+                manifest:"json"
+            },
              
            
             init: function () {

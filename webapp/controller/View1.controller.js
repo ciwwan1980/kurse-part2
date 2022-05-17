@@ -11,8 +11,9 @@ sap.ui.define([
 
         },
         onBeforeRendering:function(){
-            // this.getView().byId("zkas").setVisible(false)
+            this.getView().byId("idBtn").setVisible(true)
         }, 
+
         onAfterRendering:function(){
             $("#idAnil--idBtn").hide(function(){$(this).fadeIn(5000)})
         },
