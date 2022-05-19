@@ -39,6 +39,41 @@
 			"compact": true,
 			"cozy": true
 		},
+
+		"rootView":{
+			"viewName":"ajil.app.view.App", 
+			"type":"XML"
+		},
+		"routing":{
+			"config":{
+				"routerClass":"sap.m.routing.Router", 
+				"viewPath":"ajil.app.view",
+				"viewType":"XML", 
+				"controlId":"idSpidy"
+			},
+			"routes":[{
+				"pattern": "",
+				"name": "home",
+				"target":"modi"
+			}, 
+			{
+				"pattern": "joe",
+				"name": "detail",
+				"target":"joe"
+			}],
+			"targets":{
+				"modi":{
+					"viewName":"View1", 
+					"viewId":"idModi",
+					"controlAggregation":"pages"
+				},
+				"joe":{
+					"viewName":"View2", 
+					"viewId":"idBiden",
+					"controlAggregation":"pages"
+				}
+			}
+		},
 		"models": {
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",

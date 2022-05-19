@@ -4,10 +4,15 @@ sap.ui.define([
 
     return BaseController.extend("ajil.app.controller.View2", {
 
-        onBack: function () {
+        onInit:function(){
+            this.oRouter=this.getOwnerComponent().getRouter();
             
-            var oAppContainer=this.getView().getParent();
-             oAppContainer.to("idAnil"); 
+        },
+        onBack: function () {
+            // this.oRouter=this.getOwnerComponent().getRouter();
+            // var oAppContainer=this.getView().getParent();
+            //  oAppContainer.to("idAnil"); 
+            this.oRouter.navTo("home")
 
         },
         // onBeforeRendering:function(){
