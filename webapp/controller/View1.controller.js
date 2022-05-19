@@ -5,10 +5,10 @@ sap.ui.define([
     return BaseController.extend("ajil.app.controller.View1", {
 
 
-        onInit:function(){
+        // onInit:function(){
 
-            this.oRouter=this.getOwnerComponent().getRouter();
-        },
+        //     this.oRouter=this.getOwnerComponent().getRouter();
+        // },
 
         onNext: function () {
 
