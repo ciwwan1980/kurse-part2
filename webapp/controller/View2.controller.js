@@ -5,10 +5,16 @@ sap.ui.define([
     return BaseController.extend("ajil.app.controller.View2", {
 
         onInit:function(){
-            // this.oRouter=this.getOwnerComponent().getRouter();
            
+            // this.oRouter=this.getOwnerComponent().getRouter();
+    
             BaseController.prototype.onInit.apply(this); 
+
+            this.oRouter.getRoute("detail").attachMatched(this.herculis)
         },
+        herculis:function(){
+            console.log("herclis in View2")
+        }, 
         onBack: function () {
             // this.oRouter=this.getOwnerComponent().getRouter();
             // var oAppContainer=this.getView().getParent();

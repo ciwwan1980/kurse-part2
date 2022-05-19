@@ -60,7 +60,7 @@
 				"pattern": "joe",
 				"name": "detail",
 				"target":"joe"
-			}],
+			}], 
 			"targets":{
 				"modi":{
 					"viewName":"View1", 

@@ -6,8 +6,9 @@
 		<headerContent>
 			<Button icon="sap-icon://action" tooltip="Share" press="onNext" />
 		</headerContent>
+
 		<Button text="go to the next page" press="onNext" id="idBtn" />
 
-          <Text text="{local>/demo}" />
+        <Text text="{local>/demo}" />
 	</Page>
 </View>
