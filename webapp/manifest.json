@@ -57,7 +57,7 @@
 				"target":"modi"
 			}, 
 			{
-				"pattern": "joe",
+				"pattern": "joe/{kaven}",
 				"name": "detail",
 				"target":"joe"
 			}], 

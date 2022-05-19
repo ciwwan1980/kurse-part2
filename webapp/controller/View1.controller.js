@@ -16,7 +16,9 @@ sap.ui.define([
 
            // var oAppContainer=this.getView().getParent();
                // oAppContainer.to("idmukish"); 
-               this.oRouter.navTo("detail");
+               this.oRouter.navTo("detail", {
+                   kaven:10
+               });
 
         },
         onBeforeRendering:function(){

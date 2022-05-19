@@ -12,8 +12,10 @@ sap.ui.define([
 
             this.oRouter.getRoute("detail").attachMatched(this.herculis)
         },
-        herculis:function(){
-            console.log("herclis in View2")
+        herculis:function(oEvent){
+            var myVar=oEvent.getParameter("arguments").kaven;
+            // console.log(myVar, "myVar---------")
+            console.log("herclis in View2 , kaven value--" + myVar); 
         }, 
         onBack: function () {
             // this.oRouter=this.getOwnerComponent().getRouter();
