@@ -85,7 +85,7 @@
 			"local": {
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
-				"uri": "models/mockdata/sampledata.json",
+				"uri": "models/mockdata/fruits.json",
 				"preload": true
 			}
 		}
