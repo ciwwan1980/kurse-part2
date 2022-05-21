@@ -16,7 +16,7 @@
       },
       {
         "name" : "Grapes",
-        "type":"Grapes fruit",
+        "type":"Grapeoo",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Table_grapes_on_white.jpg/320px-Table_grapes_on_white.jpg",
         "weight": 0.1,
         "price" : 45,

@@ -25,10 +25,14 @@ sap.ui.define([
         onSearch:function(oEvent){
             var searchVal=oEvent.getParameter("query");
             // MessageToast.show(searchVal);
-            var oFilter=new Filter("name", sap.ui.model.FilterOperator.Contains, searchVal);
-
+            var oFilter1=new Filter("name", sap.ui.model.FilterOperator.Contains, searchVal);
+            var oFilter2=new Filter("type", sap.ui.model.FilterOperator.Contains, searchVal);
+            var oFilter=new Filter({
+                filters: [oFilter1,oFilter2],
+                and:false
+            });
             var oList=this.getView().byId("idList");
-            oList.getBinding("items").filter([oFilter]);
+            oList.getBinding("items").filter(oFilter);
         },
 
         onNext: function () {
