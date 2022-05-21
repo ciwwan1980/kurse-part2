@@ -45,13 +45,17 @@ sap.ui.define([
 
         },
         onItemPress:function(oEvent){
-
+         
+        
             var oSelectedItem=oEvent.getParameter("listItem");
             var fruitName=oSelectedItem.getTitle();
             // this.oRouter.navTo("detail",{
             //     kaven:fruitName,
             // })
-            this.onNext(fruitName)
+            var sPath=oSelectedItem.getBindingContextPath(); 
+            varsIndex=sPath.split("/")[sPath.split("/").length-1]
+            console.log(sPath, "sPath------------------")
+            this.onNext(varsIndex)
         },
 
         // onBeforeRendering:function(){
