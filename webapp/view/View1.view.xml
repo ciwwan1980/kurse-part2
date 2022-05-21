@@ -1,29 +1,75 @@
 
 
-<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View1">
+<View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:core="sap.ui.core"
+ controllerName="ajil.app.controller.View1">
 	
 	<Page title="view1">
 		<headerContent>
 			<Button icon="sap-icon://action" tooltip="Share" press="onNext" />
 		</headerContent>
 
-		<!-- <Button text="go to the next page" press="onNext" id="idBtn" />
 
-        <Text text="{local>/demo}" /> -->
+			<SearchField id="idsearch" search="onSearch"/>
+			<List id="idList" 
+				items="{local>/fruits}" >
 
-			<List id="idList" items="{local>/fruits}" >
+				<ObjectListItem 
+					title="{local>name}" 
+					intro="{local>type}" 
+					icon="{local>image}"
+					number="{local>price}"
+					press="onListItemPress"
 
-				<items>
-
-					<ObjectListItem title="{local>name}" intro="{local>type}" icon="{local>image}">
-
-					</ObjectListItem>
-					
+					type="Active"
+					>
+					<firstStatus>
 				
-				</items>
+						<ObjectStatus text="{local>status}" state="{
+							
+							path:'local>status',
+							formatter:'.formatter.getStatus'	
+						}">
+						</ObjectStatus>
+						
+					</firstStatus>
+
+				</ObjectListItem>
+					
+		
+
 			</List>
 	</Page>
-</View>
+</View> 
+
+
+
+<!-- <mvc:View
+ controllerName="ajil.app.controller.View1"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<List
+		items="{local>/fruits}"
+		headerText="Products">
+			<ObjectListItem
+				title="{local>Name}"
+				
+					intro="{local>type}" 
+					icon="{local>image}"
+				type="Active"
+				press="onListItemPress"
+				>
+			
+			
+		</ObjectListItem>
+	</List>
+</mvc:View>
+ -->
+
+
+
 
 
 	<!-- <DisplayListItem value="Apple" label="Best Antibiotic" />

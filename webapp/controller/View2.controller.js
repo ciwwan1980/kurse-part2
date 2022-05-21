@@ -12,9 +12,10 @@ sap.ui.define([
 
             this.oRouter.getRoute("detail").attachMatched(this.herculis)
         },
+        
         herculis:function(oEvent){
             var myVar=oEvent.getParameter("arguments").kaven;
-            // console.log(myVar, "myVar---------")
+            console.log(myVar, "myVar---------")
             console.log("herclis in View2 , kaven value--" + myVar); 
         }, 
         onBack: function () {
@@ -31,7 +32,6 @@ sap.ui.define([
         onAfterRendering:function(){
             $("#idmukish--zkas").hide(function(){$(this).fadeIn(5000)})
         },
-         
          
 
     });
