@@ -27,6 +27,12 @@
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
         "price" : 200,
         "status":"Discontinued"
+      },
+      {
+        "name" : "Pineapple",
+        "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
+        "price" : 300,
+        "status":"Discontinued"
       }
     ], 
 

@@ -14,7 +14,9 @@ xmlns:core="sap.ui.core"
 
 			<SearchField id="idsearch" search="onSearch"/>
 			<List id="idList" 
-				items="{local>/fruits}" >
+				items="{path:'local>/fruits', sorter:{path: 'type', group: true}}" 
+				
+				>
 
 				<ObjectListItem 
 					title="{local>name}" 

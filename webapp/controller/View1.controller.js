@@ -32,7 +32,7 @@ sap.ui.define([
                 and:false
             });
             var oList=this.getView().byId("idList");
-            oList.getBinding("items").filter(oFilter);
+            oList.getBinding("items").filter([oFilter]);
         },
 
         onNext: function () {
