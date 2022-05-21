@@ -21,7 +21,7 @@ sap.ui.define([
 	
 			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
 		}, 
-
+     
         onSearch:function(oEvent){
             var searchVal=oEvent.getParameter("query");
             // MessageToast.show(searchVal);
@@ -35,14 +35,23 @@ sap.ui.define([
             oList.getBinding("items").filter([oFilter]);
         },
 
-        onNext: function () {
+        onNext: function (iKaven) {
 
            // var oAppContainer=this.getView().getParent();
                // oAppContainer.to("idmukish"); 
                this.oRouter.navTo("detail", {
-                   kaven:10
+                   kaven:iKaven
                });
 
+        },
+        onItemPress:function(oEvent){
+
+            var oSelectedItem=oEvent.getParameter("listItem");
+            var fruitName=oSelectedItem.getTitle();
+            // this.oRouter.navTo("detail",{
+            //     kaven:fruitName,
+            // })
+            this.onNext(fruitName)
         },
 
         // onBeforeRendering:function(){

@@ -11,11 +11,11 @@ xmlns:core="sap.ui.core"
 			<Button icon="sap-icon://action" tooltip="Share" press="onNext" />
 		</headerContent>
 
-
+		<!--  sorter:{path: 'type', group: true} -->
 			<SearchField id="idsearch" search="onSearch"/>
 			<List id="idList" 
-				items="{path:'local>/fruits', sorter:{path: 'type', group: true}}" 
-				
+				items="{path:'local>/fruits'}" 
+				itemPress="onItemPress"
 				>
 
 				<ObjectListItem 
@@ -24,8 +24,7 @@ xmlns:core="sap.ui.core"
 					icon="{local>image}"
 					number="{local>price}"
 					press="onListItemPress"
-
-					type="Active"
+					type="Navigation"
 					>
 					<firstStatus>
 				
