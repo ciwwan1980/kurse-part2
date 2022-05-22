@@ -54,7 +54,7 @@
 			"routes":[{
 				"pattern": "",
 				"name": "home",
-				"target":"modi"
+				"target":["modi","empty"]
 			}, 
 			{
 				"pattern": "joe/{kaven}",
@@ -70,6 +70,11 @@
 				"joe":{
 					"viewName":"View2", 
 					"viewId":"idBiden",
+					"controlAggregation":"detailPages"
+				}, 
+				"empty":{
+					"viewName":"Empty", 
+					"viewId":"idEmpty",
 					"controlAggregation":"detailPages"
 				}
 			}
