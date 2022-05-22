@@ -59,7 +59,7 @@
 			{
 				"pattern": "joe/{kaven}",
 				"name": "detail",
-				"target":"joe"
+				"target":["modi","joe"]
 			}], 
 			"targets":{
 				"modi":{
