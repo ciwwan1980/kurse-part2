@@ -28,16 +28,16 @@ sap.ui.define([
             // console.log(oList, "oList----------------")
             var aItem= oList.getSelectedItems(); 
            
-            // console.log(aItem, "aItem----------------")
-            // for (let index = 0; index < aItem.length; index++) {
-            //     const element = aItem[index];
-            //     console.log(element, "element-----------------")
+            console.log(aItem, "aItem----------------")
+            for (let index = 0; index < aItem.length; index++) {
+                const element = aItem[index];
+                console.log(element.getTitle(), "elementgittitle-----------------")
                 
-            // }
-            aItem.forEach(element => {
-                console.log(element.getTitle());
-                // console.log(element, "element-----------------")
-            });
+            }
+            // aItem.forEach(element => {
+            //     console.log(element.getTitle());
+            //     // console.log(element, "element-----------------")
+            // });
         },
 
         onSearch:function(oEvent){
