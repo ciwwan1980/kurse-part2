@@ -10,13 +10,15 @@ sap.ui.define([
     
             BaseController.prototype.onInit.apply(this); 
 
-            this.oRouter.getRoute("detail").attachMatched(this.herculis)
+            this.oRouter.getRoute("detail").attachMatched(this.herculis, this)
         },
         
         herculis:function(oEvent){
             var myVar=oEvent.getParameter("arguments").kaven;
             console.log(myVar, "myVar---------")
             console.log("herclis in View2 , kaven value--" + myVar); 
+            var fruitRelativePath="local>/fruits/" + myVar; 
+            this.getView().bindElement(fruitRelativePath)
         }, 
         onBack: function () {
             // this.oRouter=this.getOwnerComponent().getRouter();

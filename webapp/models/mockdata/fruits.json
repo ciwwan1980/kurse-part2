@@ -5,14 +5,16 @@
         "type":"Apple fruit",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",
         "price" : 35, 
-        "status":"Available"
+        "status":"Available", 
+        "healthBenefit":"Muscle"
       },
       {
         "name" : "Banana",
         "type":"Banana fruit",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
         "price" : 12,
-        "status":"Available"
+        "status":"Available",
+        "healthBenefit":"Vitamin B"
       },
       {
         "name" : "Grapes",
@@ -26,13 +28,15 @@
         "name" : "Pineapple",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
         "price" : 200,
-        "status":"Discontinued"
+        "status":"Discontinued",
+        "healthBenefit":"Rich with Vitamin B"
       },
       {
         "name" : "Pineapple",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
         "price" : 300,
-        "status":"Discontinued"
+        "status":"Discontinued",
+        "healthBenefit":"Boost immune system"
       }
     ], 
 

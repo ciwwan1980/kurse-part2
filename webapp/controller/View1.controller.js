@@ -53,9 +53,9 @@ sap.ui.define([
             //     kaven:fruitName,
             // })
             var sPath=oSelectedItem.getBindingContextPath(); 
-            varsIndex=sPath.split("/")[sPath.split("/").length-1]
+            var sIndex=sPath.split("/")[sPath.split("/").length-1]
             console.log(sPath, "sPath------------------")
-            this.onNext(varsIndex)
+            this.onNext(sIndex)
         },
 
         // onBeforeRendering:function(){
