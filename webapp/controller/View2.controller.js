@@ -31,10 +31,14 @@ sap.ui.define([
         // onBeforeRendering:function(){
         //     this.getView().byId("zkas").setVisible(false)
         // }, 
-       
-        onRequest:function(){
-            MessageToast.show("hello there")
+       myField:null, 
 
+        onRequest:function(oEvent){
+            this.myField=oEvent.getSource();
+            console.log(this.myField, "this.myField________________")
+            MessageToast.show("hello there");
+            var oFragment=  new sap.ui.xmlfragment("ajil.app.fragments.popup", this)
+            oFragment.open();
         },
         
         onAfterRendering:function(){
