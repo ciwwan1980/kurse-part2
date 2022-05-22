@@ -21,23 +21,37 @@ sap.ui.define([
 	
 			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
 		}, 
+        onDelete:function(oEvent){
+            var oDeletedItem=oEvent.getParameter("listItem");
+            // console.log(oDeletedItem, "oDeletedItem-------------")
+            var sPath=oDeletedItem.getBindingContextPath(); 
+            // console.log(sPath, "sPath--------------------");
+            var sIndex=sPath.split("/")[sPath.split("/").length-1]
+            var oModel= this.getOwnerComponent().getModel("local"); 
+            // console.log(oModel, "oModel--------------------"); 
+            var aData=oModel.getProperty("/fruits"); 
+            // console.log(aData, "aData--------------------")
+            aData.splice(sIndex,1); 
+           oModel.setProperty("/fruits",aData); 
 
+        },
+        
         onShowSelItem:function(oEvent){
 
             var oList= this.getView().byId("idList"); 
             // console.log(oList, "oList----------------")
             var aItem= oList.getSelectedItems(); 
-           
             console.log(aItem, "aItem----------------")
-            for (let index = 0; index < aItem.length; index++) {
-                const element = aItem[index];
-                console.log(element.getTitle(), "elementgittitle-----------------")
+            aItem.forEach(element => {
+                console.log(element.getTitle());
+                // console.log(element, "element-----------------")
+            });
+           
+            // for (let index = 0; index < aItem.length; index++) {
+            //     const element = aItem[index];
+            //     console.log(element.getTitle(), "elementgittitle-----------------")
                 
-            }
-            // aItem.forEach(element => {
-            //     console.log(element.getTitle());
-            //     // console.log(element, "element-----------------")
-            // });
+            // }
         },
 
         onSearch:function(oEvent){
