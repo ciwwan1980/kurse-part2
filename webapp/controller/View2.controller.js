@@ -1,6 +1,7 @@
 sap.ui.define([
-    "ajil/app/controller/BaseController"
-], function (BaseController) {
+    "ajil/app/controller/BaseController",
+    "sap/m/MessageToast"
+], function (BaseController,MessageToast) {
 
     return BaseController.extend("ajil.app.controller.View2", {
 
@@ -30,6 +31,11 @@ sap.ui.define([
         // onBeforeRendering:function(){
         //     this.getView().byId("zkas").setVisible(false)
         // }, 
+       
+        onRequest:function(){
+            MessageToast.show("hello there")
+
+        },
         
         onAfterRendering:function(){
             $("#idmukish--zkas").hide(function(){$(this).fadeIn(5000)})

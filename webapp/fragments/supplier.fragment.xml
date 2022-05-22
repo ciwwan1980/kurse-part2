@@ -40,7 +40,7 @@ xmlns:f="sap.ui.layout.form"
         <ColumnListItem>
             <cells>
                 <Text text="{local>name}"/>
-                <Input value="{local>city}"/>
+                <Input value="{local>city}" showValueHelp="true" valueHelpRequest="onRequest"/>
                 <Text text="{local>sinceWhen}"/>
                 <Text text="{local>contactPerson}"/>
             </cells>

@@ -31,6 +31,7 @@ controllerName="ajil.app.controller.View2"
 			</IconTabFilter>
 
 			<IconTabFilter text="Cities" icon="sap-icon://home">
+				
 			</IconTabFilter>
 		
 		</items>
