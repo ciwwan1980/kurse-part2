@@ -6,7 +6,8 @@
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/265px-Red_Apple.jpg",
         "price" : 35, 
         "status":"Available", 
-        "healthBenefit":"Muscle"
+        "healthBenefit":"Muscle", 
+        "color":"Red"
       },
       {
         "name" : "Banana",
@@ -14,7 +15,8 @@
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
         "price" : 12,
         "status":"Available",
-        "healthBenefit":"Rich with Vitamin B"
+        "healthBenefit":"Rich with Vitamin B", 
+        "color":"Yellow"
       },
       {
         "name" : "Grapes",
@@ -23,21 +25,26 @@
         "weight": 0.1,
         "price" : 45,
         "status":"Aut of Stock",
-        "healthBenefit":"Rich with Vitamin D"
+        "healthBenefit":"Rich with Vitamin D", 
+        "color":"Green"
       },
       {
         "name" : "Pineapple",
+        "type":"Pineapple fruit",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
         "price" : 200,
         "status":"Discontinued",
-        "healthBenefit":"Rich with Vitamin B"
+        "healthBenefit":"Rich with Vitamin B", 
+        "color":"Brown"
       },
       {
         "name" : "Pineapple",
+        "type":"Pineapple2 fruit",
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pineapple_and_cross_section.jpg/286px-Pineapple_and_cross_section.jpg",
         "price" : 300,
         "status":"Discontinued",
-        "healthBenefit":"Boost immune system"
+        "healthBenefit":"Boost immune system", 
+        "color":"Brown"
       }
     ], 
 

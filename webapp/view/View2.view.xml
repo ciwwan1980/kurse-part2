@@ -1,6 +1,6 @@
 
 
-<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View2">
+<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"  xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View2">
 	
     <Page title="{local>name}" showNavButton="true" navButtonPress="onBack">
 		<!-- <Button text="Back" press="onBack" />
@@ -12,5 +12,30 @@
 	icon="{local>image}"
 	> 
 	</ObjectHeader>
+	<IconTabBar>
+		<items>
+			<IconTabFilter text="More Details" icon="sap-icon://warning" >
+				<f:SimpleForm editable="true" id="idNew">
+		
+		<f:content>	
+			<Label text="Name" />
+			<Text text="{local>name}"/>
+			<Label text="Type" />
+			<Text text="{local>type}" />
+			<Label text="Price" />
+			<Text text="{local>price}"/>
+			<Label text="Color" />
+			<Text text="{local>color}"/>
+			
+		
+		</f:content>
+	</f:SimpleForm>
+			
+			</IconTabFilter>
+			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" ></IconTabFilter>
+			<IconTabFilter text="Cities" icon="sap-icon://home"></IconTabFilter>
+		
+		</items>
+	</IconTabBar>
 	</Page>
 </View>
