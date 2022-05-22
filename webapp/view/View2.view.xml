@@ -16,20 +16,10 @@
 	<IconTabBar>
 		<items>
 			<IconTabFilter text="More Details" icon="sap-icon://warning" >
-				<f:SimpleForm editable="true" id="idNew">
+				
+				<core:Fragment fragmentName="ajil.app.fragments.additionalData" type="XML"/>
 		
-					<f:content>	
-						<Label text="Name" />
-						<Text text="{local>name}"/>
-						<Label text="Type" />
-						<Text text="{local>type}" />
-						<Label text="Price" />
-						<Text text="{local>price}"/>
-						<Label text="Color" />
-						<Text text="{local>color}"/>
-					</f:content>
-			</f:SimpleForm>	
-		</IconTabFilter>
+			</IconTabFilter>
 
 
 			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" >
