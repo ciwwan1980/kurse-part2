@@ -1,6 +1,12 @@
 
 
-<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:f="sap.ui.layout.form"  xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View2">
+<View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m"  
+xmlns:f="sap.ui.layout.form"  
+xmlns:core="sap.ui.core" 
+controllerName="ajil.app.controller.View2"
+>
 	
     <Page title="{local>name}" showNavButton="true" navButtonPress="onBack">
 		<!-- <Button text="Back" press="onBack" />
@@ -16,61 +22,16 @@
 	<IconTabBar>
 		<items>
 			<IconTabFilter text="More Details" icon="sap-icon://warning" >
-				
 				<core:Fragment fragmentName="ajil.app.fragments.additionalData" type="XML"/>
-		
 			</IconTabFilter>
 
 
 			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" >
-				<Table items="{local>/suppliers}">
-					<headerToolbar>
-						<Toolbar>
-							<ToolbarSpacer></ToolbarSpacer>
-							<Button icon="sap-icon://filter" tooltip="Filter all Supplier" press="onFilter" ></Button>
-							
-						</Toolbar>
-
-					</headerToolbar>
-					<columns>
-						<Column >
-							<header><Text text="name"/></header>
-						</Column>
-
-						<Column >
-							<header>
-								<Text text="City" />
-							</header>
-						</Column>
-
-						<Column >
-							<header>
-								<Text text="SinceWhen" />
-							</header>
-						</Column>
-
-						<Column >
-							<header>
-								<Text text="ContactPerson" />
-							</header>
-						</Column>
-					</columns>
-
-					<items>
-						<ColumnListItem>
-							<cells>
-								<Text text="{local>name}"/>
-								<Input value="{local>city}"/>
-								<Text text="{local>sinceWhen}"/>
-								<Text text="{local>contactPerson}"/>
-							</cells>
-						</ColumnListItem>
-					</items>
-
-				</Table>
+				<core:Fragment fragmentName="ajil.app.fragments.supplier" type="XML"/>
 			</IconTabFilter>
 
-			<IconTabFilter text="Cities" icon="sap-icon://home"></IconTabFilter>
+			<IconTabFilter text="Cities" icon="sap-icon://home">
+			</IconTabFilter>
 		
 		</items>
 	</IconTabBar>
