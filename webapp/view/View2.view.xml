@@ -1,6 +1,6 @@
 
 
-<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"  xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View2">
+<View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:f="sap.ui.layout.form"  xmlns:core="sap.ui.core" controllerName="ajil.app.controller.View2">
 	
     <Page title="{local>name}" showNavButton="true" navButtonPress="onBack">
 		<!-- <Button text="Back" press="onBack" />
@@ -29,10 +29,50 @@
 			
 		
 		</f:content>
-	</f:SimpleForm>
+	</f:SimpleForm>	
+		</IconTabFilter>
+
+
+			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" >
+				<Table items="{local>/suppliers}">
+					<columns>
+						<Column >
+							<header><Text text="name"/></header>
+						</Column>
+
+						<Column >
+							<header>
+								<Text text="City" />
+							</header>
+						</Column>
+
+						<Column >
+							<header>
+								<Text text="SinceWhen" />
+							</header>
+						</Column>
+
+						<Column >
+							<header>
+								<Text text="ContactPerson" />
+							</header>
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{local>name}"/>
+								<Text text="{local>sinceWhen}"/>
+								<Text text="{local>contactPerson}"/>
+								<Text text="{local>city}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+
+				</Table>
 			
 			</IconTabFilter>
-			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" ></IconTabFilter>
 			<IconTabFilter text="Cities" icon="sap-icon://home"></IconTabFilter>
 		
 		</items>
