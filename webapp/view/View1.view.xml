@@ -16,6 +16,7 @@ xmlns:core="sap.ui.core"
 			<List id="idList" 
 				items="{path:'local>/fruits'}" 
 				itemPress="onItemPress"
+				mode="MultiSelect"
 				>
 
 				<ObjectListItem 
@@ -42,6 +43,14 @@ xmlns:core="sap.ui.core"
 		
 
 			</List>
+			<footer>	
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button text="show me" type="Accept" press="onShowSelItem"/>
+						
+					</Toolbar>
+					
+			</footer>
 	</Page>
 </View> 
 

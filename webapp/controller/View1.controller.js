@@ -21,7 +21,25 @@ sap.ui.define([
 	
 			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
 		}, 
-     
+
+        onShowSelItem:function(oEvent){
+
+            var oList= this.getView().byId("idList"); 
+            // console.log(oList, "oList----------------")
+            var aItem= oList.getSelectedItems(); 
+           
+            // console.log(aItem, "aItem----------------")
+            // for (let index = 0; index < aItem.length; index++) {
+            //     const element = aItem[index];
+            //     console.log(element, "element-----------------")
+                
+            // }
+            aItem.forEach(element => {
+                console.log(element.getTitle());
+                // console.log(element, "element-----------------")
+            });
+        },
+
         onSearch:function(oEvent){
             var searchVal=oEvent.getParameter("query");
             // MessageToast.show(searchVal);
@@ -57,6 +75,8 @@ sap.ui.define([
             console.log(sPath, "sPath------------------")
             this.onNext(sIndex)
         },
+
+     
 
         // onBeforeRendering:function(){
         //     this.getView().byId("idBtn").setVisible(true)

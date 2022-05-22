@@ -14,7 +14,7 @@
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bananas_white_background_DS.jpg/320px-Bananas_white_background_DS.jpg",
         "price" : 12,
         "status":"Available",
-        "healthBenefit":"Vitamin B"
+        "healthBenefit":"Rich with Vitamin B"
       },
       {
         "name" : "Grapes",
@@ -22,7 +22,8 @@
         "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Table_grapes_on_white.jpg/320px-Table_grapes_on_white.jpg",
         "weight": 0.1,
         "price" : 45,
-        "status":"Aut of Stock"
+        "status":"Aut of Stock",
+        "healthBenefit":"Rich with Vitamin D"
       },
       {
         "name" : "Pineapple",
