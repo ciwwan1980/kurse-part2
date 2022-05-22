@@ -6,35 +6,42 @@
 		<!-- <Button text="Back" press="onBack" />
 		<Button text="Check" id="zkas" /> -->
 	<ObjectHeader 
-	title="{local>name}" 
-	intro="{local>healthBenefit}"
-	number="{local>price}"
-	icon="{local>image}"
+		title="{local>name}" 
+		intro="{local>healthBenefit}"
+		number="{local>price}"
+		icon="{local>image}"
 	> 
 	</ObjectHeader>
+
 	<IconTabBar>
 		<items>
 			<IconTabFilter text="More Details" icon="sap-icon://warning" >
 				<f:SimpleForm editable="true" id="idNew">
 		
-		<f:content>	
-			<Label text="Name" />
-			<Text text="{local>name}"/>
-			<Label text="Type" />
-			<Text text="{local>type}" />
-			<Label text="Price" />
-			<Text text="{local>price}"/>
-			<Label text="Color" />
-			<Text text="{local>color}"/>
-			
-		
-		</f:content>
-	</f:SimpleForm>	
+					<f:content>	
+						<Label text="Name" />
+						<Text text="{local>name}"/>
+						<Label text="Type" />
+						<Text text="{local>type}" />
+						<Label text="Price" />
+						<Text text="{local>price}"/>
+						<Label text="Color" />
+						<Text text="{local>color}"/>
+					</f:content>
+			</f:SimpleForm>	
 		</IconTabFilter>
 
 
 			<IconTabFilter text="Suppliers" icon="sap-icon://supplier" >
 				<Table items="{local>/suppliers}">
+					<headerToolbar>
+						<Toolbar>
+							<ToolbarSpacer></ToolbarSpacer>
+							<Button icon="sap-icon://filter" tooltip="Filter all Supplier" press="onFilter" ></Button>
+							
+						</Toolbar>
+
+					</headerToolbar>
 					<columns>
 						<Column >
 							<header><Text text="name"/></header>
@@ -63,16 +70,16 @@
 						<ColumnListItem>
 							<cells>
 								<Text text="{local>name}"/>
+								<Input value="{local>city}"/>
 								<Text text="{local>sinceWhen}"/>
 								<Text text="{local>contactPerson}"/>
-								<Text text="{local>city}"/>
 							</cells>
 						</ColumnListItem>
 					</items>
 
 				</Table>
-			
 			</IconTabFilter>
+
 			<IconTabFilter text="Cities" icon="sap-icon://home"></IconTabFilter>
 		
 		</items>
