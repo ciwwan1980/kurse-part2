@@ -5,8 +5,8 @@ xmlns="sap.m"
 xmlns:core="sap.ui.core" 
 controllerName="ajil.app.controller.App">
 
-<App id="idSpidy">
+<SplitApp id="idSpidy">
 
-</App>
+</SplitApp>
 </mvc:View>
 				

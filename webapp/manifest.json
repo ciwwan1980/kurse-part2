@@ -65,12 +65,12 @@
 				"modi":{
 					"viewName":"View1", 
 					"viewId":"idModi",
-					"controlAggregation":"pages"
+					"controlAggregation":"masterPages"
 				},
 				"joe":{
 					"viewName":"View2", 
 					"viewId":"idBiden",
-					"controlAggregation":"pages"
+					"controlAggregation":"detailPages"
 				}
 			}
 		},
