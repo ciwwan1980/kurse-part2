@@ -37,10 +37,23 @@ sap.ui.define([
             this.myField=oEvent.getSource();
             console.log(this.myField, "this.myField________________")
             MessageToast.show("hello there");
-            var oFragment=  new sap.ui.xmlfragment("ajil.app.fragments.popup", this)
+            var oFragment=  new sap.ui.xmlfragment("ajil.app.fragments.popup", this);
+            oFragment.setTitle("Cities"); 
+            console.log(oFragment.setTitle("Cities"), "oFragment cities////////////")
+            this.getView().addDependent(oFragment);
+            oFragment.bindAggregation("items", {
+                path:'local>/Cities',
+                template: new sap.m.StandardListItem({
+                    description:"{local>famousfor}", 
+                    title:"{local>name}"
+                })
+            })
             oFragment.open();
         },
-        
+        onConfirm:function(oEvent){
+        var oSelectedItem=oEvent.getParameter("selectedItem");
+        this.myField.setValue(oSelectedItem.getTitle())
+        },
         onAfterRendering:function(){
             $("#idmukish--zkas").hide(function(){$(this).fadeIn(5000)})
         },

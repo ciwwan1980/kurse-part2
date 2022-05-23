@@ -87,12 +87,12 @@
             ] 
         }
     ], 
-    "cities":[
+    "Cities":[
         {
-        "name":"Berlin", 
-        "famousfor":"Orange",
-        "type":"newOrange",
-        "otherName":"juicy orange"
+          "name":"Berlin", 
+          "famousfor":"Orange",
+          "type":"Schnieder Orange",
+          "otherName":"juicy orange"
         },
         {
             "name":"Frankfort", 
