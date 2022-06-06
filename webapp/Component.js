@@ -1,7 +1,8 @@
 sap.ui.define([
-        "sap/ui/core/UIComponent"
+        "sap/ui/core/UIComponent",
+        'sap/ui/model/json/JSONModel'
     ],
-    function (UIComponent) {
+    function (UIComponent,JSONModel) {
         "use strict";
 
         return UIComponent.extend("ajil.app.Component", {

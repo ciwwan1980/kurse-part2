@@ -14,7 +14,7 @@ sap.ui.define([
 
             this.oRouter.getRoute("detail").attachMatched(this.herculis, this)
         },
-        
+
         onSave:function(){
             var that=this;
             MessageBox.confirm("Y want to save", {
@@ -22,6 +22,11 @@ sap.ui.define([
                     that.onClose(status);
                 }
                
+            })
+        },
+        onTabSelect:function(){
+            this.oRouter.navTo("end",{
+                supplierId:"Test"
             })
         },
         onClose:function(status){

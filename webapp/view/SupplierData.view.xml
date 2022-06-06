@@ -1,0 +1,17 @@
+
+
+
+
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+controllerName="ajil.app.controller.Supplier">
+
+<Page>
+	<content>
+        <Text text="hello"/>
+    </content>
+
+</Page>
+</mvc:View>
+				

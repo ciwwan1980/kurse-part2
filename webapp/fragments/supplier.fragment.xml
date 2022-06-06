@@ -3,7 +3,7 @@ xmlns="sap.m"
 xmlns:core="sap.ui.core" 
 xmlns:f="sap.ui.layout.form"
 >
-<Table items="{local>/suppliers}">
+<Table items="{local>/suppliers}"  itemPress="onTabSelect">
     <headerToolbar>
         <Toolbar>
             <ToolbarSpacer></ToolbarSpacer>
@@ -37,7 +37,7 @@ xmlns:f="sap.ui.layout.form"
     </columns>
 
     <items>
-        <ColumnListItem>
+        <ColumnListItem type="Navigation">
             <cells>
                 <Text text="{local>name}"/>
                 <Input value="{local>city}" showValueHelp="true" valueHelpRequest="onRequest"/>

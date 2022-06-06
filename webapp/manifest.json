@@ -60,22 +60,32 @@
 				"pattern": "joe/{kaven}",
 				"name": "detail",
 				"target":["modi","joe"]
+			},
+			{
+				"pattern": "supplier/{supplierId}",
+				"name": "end",
+				"target":["modi","end"]
 			}], 
 			"targets":{
 				"modi":{
 					"viewName":"View1", 
 					"viewId":"idModi",
-					"controlAggregation":"masterPages"
+					"controlAggregation":"beginColumnPages"
 				},
 				"joe":{
 					"viewName":"View2", 
 					"viewId":"idBiden",
-					"controlAggregation":"detailPages"
+					"controlAggregation":"midColumnPages"
 				}, 
 				"empty":{
 					"viewName":"Empty", 
 					"viewId":"idEmpty",
-					"controlAggregation":"detailPages"
+					"controlAggregation":"midColumnPages"
+				},
+				"end":{
+					"viewName":"SupplierData", 
+					"viewId":"idSupplier",
+					"controlAggregation":"endColumnPages"
 				}
 			}
 		},

@@ -21,7 +21,7 @@ sap.ui.define([
 	
 			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
 		}, 
-        
+
         onDelete:function(oEvent){
             var oDeletedItem=oEvent.getParameter("listItem");
             // console.log(oDeletedItem, "oDeletedItem-------------")
@@ -75,6 +75,7 @@ sap.ui.define([
                this.oRouter.navTo("detail", {
                    kaven:iKaven
                });
+               this.getView().getParent().getParent().setLayout(sap.f.LayoutType.MidColumnFullScreen)
 
         },
         onItemPress:function(oEvent){

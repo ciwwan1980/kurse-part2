@@ -1,6 +1,6 @@
 
 
-<View 
+<mvc:View 
 xmlns:mvc="sap.ui.core.mvc" 
 xmlns="sap.m"  
 xmlns:f="sap.ui.layout.form"  
@@ -46,4 +46,4 @@ controllerName="ajil.app.controller.View2"
 		</Toolbar>
 	</footer>
 	</Page>
-</View>
+</mvc:View>
