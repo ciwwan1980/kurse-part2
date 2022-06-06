@@ -87,7 +87,8 @@
             ] 
         }
     ], 
-    "Cities":[
+    
+    "cities":[
         {
           "name":"Berlin", 
           "famousfor":"Orangooooo",

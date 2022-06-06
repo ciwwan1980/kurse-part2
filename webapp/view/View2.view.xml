@@ -31,8 +31,10 @@ controllerName="ajil.app.controller.View2"
 			</IconTabFilter>
 
 			<IconTabFilter text="Cities" icon="sap-icon://home">
-				
+
+				<core:Fragment fragmentName="ajil.app.fragments.cities" type="XML"/>
 			</IconTabFilter>
+			
 		
 		</items>
 	</IconTabBar>
