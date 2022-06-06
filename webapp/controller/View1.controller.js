@@ -21,6 +21,7 @@ sap.ui.define([
 	
 			MessageToast.show("Pressed : " + oEvent.getSource().getTitle());
 		}, 
+        
         onDelete:function(oEvent){
             var oDeletedItem=oEvent.getParameter("listItem");
             // console.log(oDeletedItem, "oDeletedItem-------------")
@@ -44,7 +45,7 @@ sap.ui.define([
             console.log(aItem, "aItem----------------")
             aItem.forEach(element => {
                 console.log(element.getTitle());
-                // console.log(element, "element-----------------")
+                console.log(element, "element-----------------")
             });
            
             // for (let index = 0; index < aItem.length; index++) {

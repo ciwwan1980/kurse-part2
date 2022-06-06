@@ -44,6 +44,7 @@ xmlns:f="sap.ui.layout.form"
                 <Text text="{local>sinceWhen}"/>
                 <Text text="{local>contactPerson}"/>
             </cells>
+            <Button press="onClose"/>
         </ColumnListItem>
     </items>
 

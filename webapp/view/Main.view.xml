@@ -1,0 +1,525 @@
+
+
+<core:FragmentDefinition xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:core="sap.ui.core"
+xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+xmlns:smartTable="sap.ui.comp.smarttable">
+<smartTable:SmartTable id="idUi031SmartTable" entitySet="xVWKxIUP_PS2_31_C_VOLRLEV" tableType="ResponsiveTable" useExportToExcel="false"
+    useVariantManagement="true" useTablePersonalisation="true" showRowCount="false" tableBindingPath="viewModel>/xVWKxIUP_PS2_31_C_VOLRLEV"
+    enableAutoBinding="true" beforeRebindTable="onBeforeRebindTable"
+    ignoreFromPersonalisation="kpbilap_text,kpbi_text,datenherkunft,datenkategorie,kpbi_eop,kalenderjahr,mengeTfzg,position_ps,prozent,kpbi_sop,szenarioid,menge_is_null,prozent_is_null"
+    requestAtLeastFields="szenarioid,massnahmeid,vertriebsregion" persistencyKey="vertriebsregion,dateninhalt"
+    class="sapUiResponsiveContentPadding"
+    app:p13nDialogSettings='{ columns:{visible:true},filter:{visible:true},sort:{visible:true},group:{visible:true} }'
+    initialise="onSmartTableInitialise" placeToolbarInTable="true">
+    <Table id="idUi031Table" growing="false" mode="None" delete="onTableRowDelete" modeAnimationOn="false"
+        sticky="HeaderToolbar,InfoToolbar,ColumnHeaders" updateFinished="onTableUpdateFinished">
+        <columns>
+            <Column minScreenWidth="Tablet" hAlign="Begin" mergeDuplicates="true" mergeFunctionName="data#mergeKey" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData"
+                        value='\{"columnKey": "vertriebsregion", "columnIndex":"1", "leadingProperty": "vertriebsregion","sortProperty": "vertriebsregion","filterProperty": "vertriebsregion", "type":"string"}'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnVertriebsregionText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet" width="17em" mergeDuplicates="true" mergeFunctionName="data#mergeKey">
+                <customData>
+                    <core:CustomData key="p13nData"
+                        value='\{"columnKey": "poid_lap", "columnIndex":"2", "leadingProperty": "poid_lap","sortProperty": "kpbiLapText","filterProperty": "kpbiText", "type":"string"}'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnPoidLapText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet" width="17em" mergeDuplicates="true" mergeFunctionName="data#mergeKey">
+                <customData>
+                    <core:CustomData key="p13nData"
+                        value='\{"columnKey": "kpbiLapText", "columnIndex":"3", "leadingProperty": "kpbiLapText","sortProperty": "kpbiLapText","filterProperty": "kpbiLapText", "type":"string"}'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnKPBText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet" width="5em" mergeDuplicates="true" mergeFunctionName="data#mergeKey">
+                <customData>
+                    <core:CustomData key="p13nData"
+                        value='\{"columnKey": "sop", "columnIndex":"4", "leadingProperty": "sop","sortProperty": "sop","filterProperty": "sop", "type":"string"}'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnSOPText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet" width="5em" mergeDuplicates="true" mergeFunctionName="data#mergeKey">
+                <customData>
+                    <core:CustomData key="p13nData"
+                        value='\{"columnKey": "eop", "columnIndex":"5", "leadingProperty": "eop","sortProperty": "eop","filterProperty": "eop", "type":"string"}'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnEOPText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "Einheit", "columnIndex":"6", "leadingProperty": "Einheit" }'/>
+                </customData>
+                <Text text="{i18n>ListTableColumnEinheitText}" maxLines="2"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y1", "columnIndex":"7", "leadingProperty": "y1"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y1/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y2", "columnIndex":"8", "leadingProperty": "y2"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y2/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y3", "columnIndex":"9", "leadingProperty": "y3"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y3/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y4", "columnIndex":"10", "leadingProperty": "y4"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y4/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y5", "columnIndex":"11", "leadingProperty": "y5"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y5/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y6", "columnIndex":"12", "leadingProperty": "y6"}'/>
+                </customData>
+                <Text
+                    text="{
+:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y6/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y7", "columnIndex":"13", "leadingProperty": "y7"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y7/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y8", "columnIndex":"14", "leadingProperty": "y8"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y8/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y9", "columnIndex":"15", "leadingProperty": "y9"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y9/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y10", "columnIndex":"16", "leadingProperty": "y10"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y10/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y11", "columnIndex":"17", "leadingProperty": "y11"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y11/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y12", "columnIndex":"18", "leadingProperty": "y12"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y12/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y13", "columnIndex":"19", "leadingProperty": "y13"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y13/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y14", "columnIndex":"20", "leadingProperty": "y14"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y14/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y15", "columnIndex":"21", "leadingProperty": "y15"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y15/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y16", "columnIndex":"22", "leadingProperty": "y16"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y16/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y17", "columnIndex":"23", "leadingProperty": "y17"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y17/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y18", "columnIndex":"24", "leadingProperty": "y18"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y18/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y19", "columnIndex":"25", "leadingProperty": "y19"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y19/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y20", "columnIndex":"26", "leadingProperty": "y20"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y20/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y21", "columnIndex":"27", "leadingProperty": "y21"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y21/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y22", "columnIndex":"28", "leadingProperty": "y22"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y22/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y23", "columnIndex":"29", "leadingProperty": "y23"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y23/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y24", "columnIndex":"30", "leadingProperty": "y24"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y24/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+            <Column minScreenWidth="Tablet" hAlign="End" visible="false">
+                <customData>
+                    <core:CustomData key="p13nData" value='\{"columnKey": "y25", "columnIndex":"31", "leadingProperty": "y25"}'/>
+                </customData>
+                <Text
+                    text="{parts:[{path:'viewModel>/tableColumns/startJahr'},{path:'viewModel>/tableColumns/y25/diff'}], formatter: '.formatter.calculateYear'}"/>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem type="Active" press="onTableItemPress">
+                <cells>
+                    <Text text="{viewModel>vertriebsregion}">
+                        <customData>
+                            <core:CustomData key="mergeKey" value="{viewModel>vertriebsregion}"/>
+                        </customData>
+                    </Text>
+                    <Text text="{viewModel>kpbiLapText}">
+                        <customData>
+                            <core:CustomData key="mergeKey" value="{viewModel>kpbiLapText}"/>
+                        </customData>
+                    </Text>
+                    <Text text="{viewModel>kpbiText}">
+                        <customData>
+                            <core:CustomData key="mergeKey" value="{viewModel>kpbiText}"/>
+                        </customData>
+                    </Text>
+                    <Text text="{path:'viewModel>sop', type: 'sap.ui.model.type.DateTime', formatOptions: {pattern: 'MM/yyyy'}}">
+                        <customData>
+                            <core:CustomData key="mergeKey" value="{path:'viewModel>sop', type: 'sap.ui.model.type.DateTime', formatOptions: {pattern: 'MM/yyyy'}}"/>
+                        </customData>
+                    </Text>
+                    <Text text="{path:'viewModel>eop', type: 'sap.ui.model.type.DateTime', formatOptions: {pattern: 'MM/yyyy'}}">
+                        <customData>
+                            <core:CustomData key="mergeKey" value="{path:'viewModel>eop', type: 'sap.ui.model.type.DateTime', formatOptions: {pattern: 'MM/yyyy'}}"/>
+                        </customData>
+                    </Text>
+                    <HBox alignItems="Center">
+                        <Text text="{i18n>lblEinheitTzd}" visible="{= (${viewModel>position_ps} === 'MEVK000001')}"/>
+                        <Text text="{i18n>lblEinheitPct}" visible="{= (${viewModel>position_ps} === 'PRWXMEVK01')}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <!--{path:'viewModel>y1/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"-->
+                        <Input value="{path:'viewModel>y1/newValue', formatter: '.formatter.displayFloat'}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y1/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y1/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y2/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y2/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y2/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y3/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y3/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y3/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y4/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y4/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y4/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y5/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y5/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y5/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        
+                        <!--{path:'viewModel>y6/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}-->
+                        <Input
+                            value="{parts:[{path:'viewModel>y6/newValue'}], formatter: '.formatter.displayFloat'}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y6/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y6/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                        "{parts:[{path:'viewModel>y6/newValue'}], formatter: '.formatter.displayFloat'}"
+                            value="{parts:[{path:'viewModel>y7/newValue'}], formatter: '.formatter.displayFloat'}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y7/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y7/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y8/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y8/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y8/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y9/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y9/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y9/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y10/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y10/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y10/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y11/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y11/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y11/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y12/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y12/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y12/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y13/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y13/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y13/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y14/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y14/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y14/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y15/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y15/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y15/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y16/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y16/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y16/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y17/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y17/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y17/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y18/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y18/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y18/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y19/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y19/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y19/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y20/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y20/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y20/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y21/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y21/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y21/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y22/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y22/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y22/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y23/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y23/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y23/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y24/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y24/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y24/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                    <HBox justifyContent="End" alignItems="Center">
+                        <Input
+                            value="{path:'viewModel>y25/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'PRWXMEVK01' &amp;&amp; ${viewModel>poid_lap} !== ${viewModel>planungsobjekt})}"
+                            change="onChangeYearInput" valueStateText="{i18n>msgSumMoreThan100}" valueState="{path:'viewModel>y25/valueState'}"
+                            editable="{viewModel>/editTableField}" textAlign="End"/>
+                        <Text
+                            text="{path: 'viewModel>y25/newValue', type: 'sap.ui.model.type.Float', formatOptions: {maxIntegerDigits:11, maxFractionDigits:1, minFractionDigits:1, groupingEnabled:true}}"
+                            visible="{= (${viewModel>position_ps} === 'MEVK000001' || ${viewModel>poid_lap} === ${viewModel>planungsobjekt})}"/>
+                    </HBox>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</smartTable:SmartTable>
+</core:FragmentDefinition>

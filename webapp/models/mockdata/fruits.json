@@ -90,7 +90,7 @@
     "Cities":[
         {
           "name":"Berlin", 
-          "famousfor":"Orange",
+          "famousfor":"Orangooooo",
           "type":"Schnieder Orange",
           "otherName":"juicy orange"
         },
@@ -98,6 +98,13 @@
             "name":"Frankfort", 
             "famousfor":"Apple",
             "type":"newApple",
-            "otherName":"juicy Apple"}
+            "otherName":"juicy Apple"
+          }, 
+          {
+            "name":"WolfsBurg", 
+            "famousfor":"Grapes",
+            "type":" Red Grapes",
+            "otherName":"juicy Grapes"
+          }
     ]
   }
