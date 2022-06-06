@@ -12,5 +12,9 @@
             <core:Item key="{local>name}" text="{local>name}"/>
 
         </ComboBox>
+        <MultiComboBox items="{local>/cities}">
 
+            <core:Item key="{local>name}" text="{local>name}"/>
+
+        </MultiComboBox>
     </core:FragmentDefinition>

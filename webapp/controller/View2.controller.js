@@ -1,7 +1,8 @@
 sap.ui.define([
     "ajil/app/controller/BaseController",
-    "sap/m/MessageToast"
-], function (BaseController,MessageToast) {
+    "sap/m/MessageToast", 
+    "sap/m/MessageBox"
+], function (BaseController,MessageToast, MessageBox) {
 
     return BaseController.extend("ajil.app.controller.View2", {
 
@@ -14,6 +15,25 @@ sap.ui.define([
             this.oRouter.getRoute("detail").attachMatched(this.herculis, this)
         },
         
+        onSave:function(){
+            var that=this;
+            MessageBox.confirm("Y want to save", {
+                onClose:function(status){
+                    that.onClose(status);
+                }
+               
+            })
+        },
+        onClose:function(status){
+           
+            if(status==="OK"){
+                MessageToast.show("your order has been saved")
+            }else{
+                MessageBox.error("There is an error")
+            }
+
+        },
+
         herculis:function(oEvent){
             var myVar=oEvent.getParameter("arguments").kaven;
             console.log(myVar, "myVar---------")

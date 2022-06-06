@@ -38,5 +38,12 @@ controllerName="ajil.app.controller.View2"
 		
 		</items>
 	</IconTabBar>
+	<footer>
+
+		<Toolbar>
+			<ToolbarSpacer></ToolbarSpacer>
+			<Button  text="save"  icon="sap-icon://save" press="onSave"  />
+		</Toolbar>
+	</footer>
 	</Page>
 </View>
